@@ -20,33 +20,33 @@ let totalDeCobaias = 0;
 let totalDeCoelhos = 0;
 let totalDeRatos = 0;
 let totalDeSapos = 0;
+
 let casosDeTestes = parseInt(lines.shift());
 
-for(contador = 1; contador <= casosDeTestes; contador++) {
-    let entrada = lines.shift().split(' ');
-    let quantidadeDeCobaias = parseInt(entrada[0]);
-    let tipoDeCoabaia = entrada[1].toUpperCase();
-    
-    totalDeCobaias += quantidadeDeCobaias;
-    
-    if(tipoDeCoabaia === 'C') {
-        totalDeCoelhos += quantidadeDeCobaias
-    } else if(tipoDeCoabaia === 'R') {
-        totalDeRatos += quantidadeDeCobaias
-    } else if(tipoDeCoabaia === 'S') {
-        totalDeSapos += quantidadeDeCobaias
-    }
-    
+for (contador = 1; contador <= casosDeTestes; contador++) {
+  let entrada = lines.shift().split(" ");
+  let quantidadeDeCobaias = parseInt(entrada[0]);
+  let tipoDeCoabaia = entrada[1].toUpperCase();
+
+  totalDeCobaias += quantidadeDeCobaias;
+
+  if (tipoDeCoabaia === "C") {
+    totalDeCoelhos += quantidadeDeCobaias;
+  } else if (tipoDeCoabaia === "R") {
+    totalDeRatos += quantidadeDeCobaias;
+  } else if (tipoDeCoabaia === "S") {
+    totalDeSapos += quantidadeDeCobaias;
+  }
 }
-percentualDeCoelhos = ((totalDeCoelhos / totalDeCobaias) * 100).toFixed(2)
-percentualDeRatos = ((totalDeRatos / totalDeCobaias) * 100).toFixed(2)
-percentualDeSapos = ((totalDeSapos / totalDeCobaias) * 100).toFixed(2)
+percentualDeCoelhos = ((totalDeCoelhos / totalDeCobaias) * 100).toFixed(2);
+percentualDeRatos = ((totalDeRatos / totalDeCobaias) * 100).toFixed(2);
+percentualDeSapos = ((totalDeSapos / totalDeCobaias) * 100).toFixed(2);
 
-console.log(`Total: ${totalDeCobaias} cobaias`)
-console.log(`Total de coelhos: ${totalDeCoelhos}`)
-console.log(`Total de ratos: ${totalDeRatos}`)
-console.log(`Total de sapos: ${totalDeSapos}`)
+console.log(`Total: ${totalDeCobaias} cobaias`);
+console.log(`Total de coelhos: ${totalDeCoelhos}`);
+console.log(`Total de ratos: ${totalDeRatos}`);
+console.log(`Total de sapos: ${totalDeSapos}`);
 
-console.log(`Percentual de coelhos: ${percentualDeCoelhos} %`)
-console.log(`Percentual de ratos: ${percentualDeRatos} %`)
-console.log(`Percentual de sapos: ${percentualDeSapos} %`)
+console.log(`Percentual de coelhos: ${percentualDeCoelhos} %`);
+console.log(`Percentual de ratos: ${percentualDeRatos} %`);
+console.log(`Percentual de sapos: ${percentualDeSapos} %`);
